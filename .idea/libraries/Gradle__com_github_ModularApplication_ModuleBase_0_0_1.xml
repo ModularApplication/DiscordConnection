@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ModularApplication:ModuleBase:0.0.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Could not resolve com.github.ModularApplication:ModuleBase:0.0.1." />
+      <root url="jar://$USER_HOME$/kotlin/jarToLoad2/.gradle/6.3/caches/modules-2/files-2.1/com.github.ModularApplication/ModuleBase/0.0.1/1f5ce604e57aee7e3f82a1a0428aa2c042b82346/ModuleBase-0.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

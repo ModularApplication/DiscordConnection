@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:6.1.0'
+    }
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+
+group = 'com.zxerrinor'
+version = '0.1'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url 'https://jitpack.io'
+        credentials { username authToken }
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
+    implementation 'net.dv8tion:JDA:4.2.0_228'
+    compile 'com.github.ModularApplication:ModuleBase:0.0.1'
+}
+
+sourceSets {
+    main.kotlin.srcDir "src/main/kotlin"
+    main.resources.srcDir "src/main/resources"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
