@@ -15,7 +15,7 @@ plugins {
 apply plugin: 'com.github.johnrengelman.shadow'
 
 group = 'com.zxerrinor'
-version = '0.1'
+version = '0.2'
 
 repositories {
     mavenCentral()
