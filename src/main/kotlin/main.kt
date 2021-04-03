@@ -32,7 +32,11 @@ class DiscordConnection : ExecutableModule {
 
     }
 
-    fun setHandlerForEvent(eventClass: KClass<*>, handler: (GenericEvent) -> Unit) {
-        eventListener.handlers[eventClass] = handler
+    fun addHandlerForEvent(eventClass: KClass<*>, handler: (GenericEvent) -> Unit) {
+        val existingHandler = eventListener.handlers[eventClass]
+        if(existingHandler != null) eventListener.handlers[eventClass] = {
+            existingHandler(it)
+            handler(it)
+        } else eventListener.handlers[eventClass] = handler
     }
 }
