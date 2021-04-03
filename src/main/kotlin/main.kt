@@ -39,4 +39,8 @@ class DiscordConnection : ExecutableModule {
             handler(it)
         } else eventListener.handlers[eventClass] = handler
     }
+
+    fun clearHandlersForEvent(eventClass: KClass<*>) {
+        eventListener.handlers.remove(eventClass)
+    }
 }
